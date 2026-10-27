@@ -43,8 +43,8 @@ export const projects: Project[] = [
       "A multi-page coffee shop site — home, about, history, gallery, products and contact — built around a cream-and-espresso palette, a hand-lettered script accent and a hero that invites you in for a cup.",
     image: "/projects/caffeine.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    repoUrl: null,
-    repoLabel: "Static build",
+    repoUrl: "https://github.com/youssef-2420/caffeine",
+    repoLabel: "View code",
     year: "2026",
   },
 ];

@@ -1,36 +1,39 @@
-const links = [
-  { href: "#work", label: "Work" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
-];
+function GithubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        stroke="none"
+        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+      />
+    </svg>
+  );
+}
 
 export function NavBar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-bg/70 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="text-sm font-semibold tracking-tight text-ink">
-          Youssef Ait Addi
-        </a>
-        <nav className="flex items-center gap-6">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted transition-colors hover:text-ink"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="https://github.com/youssef-2420"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-border-strong px-4 py-1.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-ink"
-          >
-            GitHub
-          </a>
-        </nav>
+    <nav className="nav shell" aria-label="Main navigation">
+      <a className="brand" href="#top" aria-label="Portfolio home">
+        <span>YA</span>
+        <small>
+          Full-stack
+          <br />
+          developer
+        </small>
+      </a>
+      <div className="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
       </div>
-    </header>
+      <a
+        className="round-link"
+        href="https://github.com/youssef-2420"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Open GitHub"
+      >
+        <GithubIcon />
+      </a>
+    </nav>
   );
 }

@@ -27,11 +27,6 @@ export function NavBar() {
     <nav className="nav shell" aria-label="Main navigation">
       <a className="brand" href="#top" aria-label="Portfolio home">
         <span>YA</span>
-        <small>
-          Full-stack
-          <br />
-          developer
-        </small>
       </a>
       <div className="nav-links">
         <a href="#work">Work</a>

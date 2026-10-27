@@ -14,7 +14,7 @@ function ArrowIcon() {
 const principles = [
   { n: "01", label: "Product thinking" },
   { n: "02", label: "Interface & interaction design" },
-  { n: "03", label: "Full-stack engineering" },
+  { n: "03", label: "Building real products" },
 ];
 
 export default function Home() {
@@ -68,8 +68,8 @@ export default function Home() {
           </h2>
           <div data-reveal>
             <p>
-              I work across product thinking, interface design, and full-stack development to
-              make ideas feel simple, memorable, and ready for the real world.
+              I&rsquo;m into product design and building the things I design — turning ideas into
+              interfaces, and interfaces into real, working products.
             </p>
             <ul>
               {principles.map((item) => (
@@ -89,8 +89,8 @@ export default function Home() {
           </p>
           <h2>Let&rsquo;s build something.</h2>
           <p>
-            Have a product that needs building? I&rsquo;d like to hear about it — whether that
-            means a quick chat or a full-stack build from scratch.
+            Have a product that needs designing or building? I&rsquo;d like to hear about it —
+            whether that means a quick chat or building it out from scratch.
           </p>
         </div>
         <div className="connect-links">

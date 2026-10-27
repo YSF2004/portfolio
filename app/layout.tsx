@@ -15,9 +15,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Youssef Ait Addi — Full-Stack Developer",
+  title: "Youssef Ait Addi",
   description:
-    "Portfolio of Youssef Ait Addi, a full-stack developer who builds products end-to-end with a designer's eye. Projects: kelus, Digi Moqef, Caffeine.",
+    "Portfolio of Youssef Ait Addi, exploring product design and building things end to end. Projects: kelus, Digi Moqef, Caffeine.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

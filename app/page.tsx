@@ -105,6 +105,14 @@ export default function Home() {
           >
             GitHub <ArrowIcon />
           </a>
+          <a
+            className="connect-link"
+            href="https://www.linkedin.com/in/youssef-ait-addi-2b794b1a2/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn <ArrowIcon />
+          </a>
         </div>
       </section>
 

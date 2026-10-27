@@ -32,6 +32,9 @@ export default function Home() {
           <br />
           <em>made human.</em>
         </h1>
+        <p className="signature mono animate-fade-up" style={{ animationDelay: "120ms" }}>
+          Youssef Ait Addi
+        </p>
         <div className="hero-foot animate-fade-up" style={{ animationDelay: "160ms" }}>
           <p>
             I shape useful ideas into distinct, thoughtful experiences — from the first sketch to
@@ -117,9 +120,14 @@ export default function Home() {
       </section>
 
       <footer className="shell">
-        <p className="eyebrow-ish mono">Have a project in mind?</p>
-        <a className="mega-link" href="mailto:aitaddiyoussef1@gmail.com">
-          Let&rsquo;s make it real <ArrowIcon />
+        <p className="eyebrow-ish mono">More work lives here</p>
+        <a
+          className="mega-link"
+          href="https://github.com/youssef-2420"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See it on GitHub <ArrowIcon />
         </a>
         <div className="foot-row mono">
           <span>Portfolio · 2026</span>

@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "My first HTML and CSS project, built two years ago: a warm, multi-page site for a specialty coffee space — home, about, history, gallery, products and contact — built around a cream-and-espresso palette.",
     image: "/projects/caffeine-shot.jpg",
     tech: ["HTML", "CSS", "JavaScript"],
-    demoUrl: null,
+    demoUrl: "https://caffeine-site.vercel.app",
     repoUrl: "https://github.com/YSF2004/caffeine",
     repoLabel: "View code",
   },

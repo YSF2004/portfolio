@@ -43,7 +43,6 @@ export function ProjectRow({ project }: { project: Project }) {
       <div className="project-copy">
         <h2>{project.name}</h2>
         <p className="summary">{project.summary}</p>
-        <p className="meta mono">{project.tech.join(" · ")}</p>
         {project.repoUrl && (
           <a
             className="project-repo-link"

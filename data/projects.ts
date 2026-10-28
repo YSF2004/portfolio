@@ -29,7 +29,7 @@ export const projects: Project[] = [
     tone: "moqef",
     summary:
       "A bold, editorial home-services booking studio: plumbing, electrical, AC, painting, handyman and cleaning, dispatched same day.",
-    image: "/projects/digimoqef-hd.jpg",
+    image: "/projects/digimoqef-site.jpg",
     tech: ["HTML", "CSS", "JavaScript", "oklch"],
     demoUrl: "https://digimoqef-site.vercel.app",
     repoUrl: "https://github.com/youssef-2420/digi2",

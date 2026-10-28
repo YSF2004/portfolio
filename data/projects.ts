@@ -41,7 +41,7 @@ export const projects: Project[] = [
     tone: "kelus",
     summary:
       "A local-first study app that turns a student's own notes into short recall sessions and an adaptive study plan.",
-    image: "/projects/kelus-hd.jpg",
+    image: "/projects/kelus-site.jpg",
     tech: ["Next.js", "TypeScript", "Supabase"],
     demoUrl: "https://kelus.me",
     repoUrl: null,

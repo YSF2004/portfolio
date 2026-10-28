@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "A local-first study app that turns a student's own notes into short recall sessions and an adaptive study plan.",
     image: "/projects/kelus-hd.jpg",
     tech: ["Next.js", "TypeScript", "Supabase"],
-    demoUrl: "https://kelus-seven.vercel.app",
+    demoUrl: "https://kelus.me",
     repoUrl: null,
     repoLabel: "Private repo",
   },

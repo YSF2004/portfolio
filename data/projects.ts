@@ -3,7 +3,6 @@ export type Project = {
   name: string;
   number: string;
   tone: "caffeine" | "moqef" | "kelus";
-  mark: string;
   category: string;
   summary: string;
   image: string;
@@ -19,7 +18,6 @@ export const projects: Project[] = [
     name: "Caffeine",
     number: "01",
     tone: "caffeine",
-    mark: "C",
     category: "Static site",
     summary:
       "A warm, multi-page site for a specialty coffee space — home, about, history, gallery, products and contact — built around a cream-and-espresso palette.",
@@ -34,7 +32,6 @@ export const projects: Project[] = [
     name: "Digi Moqef",
     number: "02",
     tone: "moqef",
-    mark: "M",
     category: "Marketing site",
     summary:
       "A bold, editorial home-services booking studio: plumbing, electrical, AC, painting, handyman and cleaning, dispatched same day.",
@@ -49,7 +46,6 @@ export const projects: Project[] = [
     name: "Kelus",
     number: "03",
     tone: "kelus",
-    mark: "K",
     category: "Study app",
     summary:
       "A local-first study app that turns a student's own notes into short recall sessions and an adaptive study plan.",

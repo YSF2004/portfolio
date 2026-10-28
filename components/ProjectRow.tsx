@@ -29,15 +29,12 @@ export function ProjectRow({ project }: { project: Project }) {
       <VisualLink href={visualHref} tone={project.tone}>
         <Image
           src={project.image}
-          alt=""
+          alt={`Screenshot of the ${project.name} website`}
           fill
           className="project-shot"
           sizes="(min-width: 1024px) 50vw, 100vw"
         />
         <span className="project-number mono">{project.number}</span>
-        <div className="project-mark" aria-hidden="true">
-          <span>{project.mark}</span>
-        </div>
         <span className="view-project">
           {project.demoUrl ? "Live demo" : project.repoLabel} <ArrowIcon />
         </span>

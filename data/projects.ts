@@ -21,7 +21,7 @@ export const projects: Project[] = [
     category: "Static site",
     summary:
       "My first HTML and CSS project, built two years ago: a warm, multi-page site for a specialty coffee space — home, about, history, gallery, products and contact — built around a cream-and-espresso palette.",
-    image: "/projects/caffeine.jpg",
+    image: "/projects/caffeine-shot.jpg",
     tech: ["HTML", "CSS", "JavaScript"],
     demoUrl: null,
     repoUrl: "https://github.com/YSF2004/caffeine",

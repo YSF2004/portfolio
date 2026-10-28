@@ -2,7 +2,6 @@ export type Project = {
   slug: string;
   name: string;
   tone: "caffeine" | "moqef" | "kelus";
-  category: string;
   summary: string;
   image: string;
   tech: string[];
@@ -16,7 +15,6 @@ export const projects: Project[] = [
     slug: "caffeine",
     name: "Caffeine",
     tone: "caffeine",
-    category: "Static site",
     summary:
       "My first HTML and CSS project, built two years ago: a warm, multi-page site for a specialty coffee space — home, about, history, gallery, products and contact — built around a cream-and-espresso palette.",
     image: "/projects/caffeine-hd.jpg",
@@ -29,7 +27,6 @@ export const projects: Project[] = [
     slug: "digi-moqef",
     name: "Digi Moqef",
     tone: "moqef",
-    category: "Marketing site",
     summary:
       "A bold, editorial home-services booking studio: plumbing, electrical, AC, painting, handyman and cleaning, dispatched same day.",
     image: "/projects/digimoqef-hd.jpg",
@@ -42,7 +39,6 @@ export const projects: Project[] = [
     slug: "kelus",
     name: "Kelus",
     tone: "kelus",
-    category: "Study app",
     summary:
       "A local-first study app that turns a student's own notes into short recall sessions and an adaptive study plan.",
     image: "/projects/kelus-hd.jpg",

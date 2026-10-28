@@ -41,10 +41,7 @@ export function ProjectRow({ project }: { project: Project }) {
       </VisualLink>
 
       <div className="project-copy">
-        <div>
-          <p className="mono">{project.category}</p>
-          <h2>{project.name}</h2>
-        </div>
+        <h2>{project.name}</h2>
         <p className="summary">{project.summary}</p>
         <p className="meta mono">{project.tech.join(" · ")}</p>
         {project.repoUrl && (

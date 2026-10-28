@@ -120,14 +120,9 @@ export default function Home() {
       </section>
 
       <footer className="shell">
-        <p className="eyebrow-ish mono">More work lives here</p>
-        <a
-          className="mega-link"
-          href="https://github.com/youssef-2420"
-          target="_blank"
-          rel="noreferrer"
-        >
-          See it on GitHub <ArrowIcon />
+        <p className="eyebrow-ish mono">Got a project in mind?</p>
+        <a className="mega-link" href="mailto:aitaddiyoussef1@gmail.com">
+          Say hello <ArrowIcon />
         </a>
         <div className="foot-row mono">
           <span>Portfolio · 2026</span>

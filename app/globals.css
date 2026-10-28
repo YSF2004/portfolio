@@ -113,7 +113,7 @@ footer > div.foot-row a:focus-visible { opacity: .6; }
   html { scroll-behavior: auto; }
   .animate-fade-up { animation: none; }
   [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .project-visual, .project-shot, .project-mark, .view-project, .project-copy h2 { transition: none; }
+  .project-visual, .project-shot, .view-project, .project-copy h2 { transition: none; }
 }
 
 /* Shared entrance animations */

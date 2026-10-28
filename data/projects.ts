@@ -27,7 +27,7 @@ export const projects: Project[] = [
     tone: "moqef",
     summary:
       "A bold, editorial home-services booking studio: plumbing, electrical, AC, painting, handyman and cleaning, dispatched same day.",
-    image: "/projects/digimoqef-site.jpg",
+    image: "/projects/digimoqef-hero.jpg",
     demoUrl: "https://digimoqef-site.vercel.app",
     repoUrl: "https://github.com/youssef-2420/digi2",
     repoLabel: "View code",

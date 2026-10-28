@@ -35,7 +35,6 @@ export function ProjectRow({ project }: { project: Project }) {
           className="project-shot"
           sizes="(min-width: 1024px) 50vw, 100vw"
         />
-        <span className="project-number mono">{project.number}</span>
         <span className="view-project">
           {project.demoUrl ? "Live demo" : project.repoLabel} <ArrowIcon />
         </span>

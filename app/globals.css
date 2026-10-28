@@ -57,7 +57,6 @@ h1 em, .about h2 em { color: #d62a1e; font-style: normal; font-weight: inherit; 
 .kelus { background: #e4e4df; }
 .project-shot { position: absolute; inset: 0; z-index: 0; object-fit: cover; transform: scale(1); transition: transform .5s ease; }
 .project-visual:hover .project-shot { transform: scale(1.04); }
-.project-number { position: relative; z-index: 1; position: absolute; top: 22px; left: 24px; font-size: 11px; letter-spacing: .1em; color: #fff; background: rgba(17,17,17,.78); padding: 5px 10px; }
 .view-project { position: relative; z-index: 1; position: absolute; right: 22px; bottom: 20px; font-size: 11px; display: flex; gap: 8px; align-items: center; color: #fff; background: rgba(17,17,17,.78); padding: 9px 16px; transition: gap .25s ease, background .25s ease; }
 .project-visual:hover .view-project, .project-visual:focus-visible .view-project { gap: 14px; background: #d62a1e; }
 .project-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }

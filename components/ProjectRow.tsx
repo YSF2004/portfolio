@@ -31,6 +31,7 @@ export function ProjectRow({ project }: { project: Project }) {
           src={project.image}
           alt={`Screenshot of the ${project.name} website`}
           fill
+          unoptimized
           className="project-shot"
           sizes="(min-width: 1024px) 50vw, 100vw"
         />

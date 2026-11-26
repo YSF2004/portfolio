@@ -44,7 +44,6 @@ export function ProjectRow({ project, index }: { project: Project; index: number
       <span className="preview-label">View screenshot <ExpandIcon /></span>
     </button>}
     <div className="project-actions">
-      {featured && <button className="try-sketch" onClick={() => openPreview("sketch")} aria-haspopup="dialog">Try recall sketch <ArrowIcon /></button>}
       {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Visit website <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
       {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">View code <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
     </div>

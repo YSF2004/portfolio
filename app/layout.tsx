@@ -16,11 +16,11 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aitaddi.tech"),
-  title: "Youssef Ait Addi — Product Design & Development",
+  title: "Youssef AIT ADDI — Product Design & Development",
   alternates: { canonical: "/" },
-  openGraph: { title: "Youssef Ait Addi — Product Design & Development", description: "Thoughtful interfaces, from idea to interaction. Selected work: Kelus, Digi Moqef, and Caffeine.", url: "https://aitaddi.tech", type: "website", images: [{ url: "/projects/kelus-site.jpg", alt: "Kelus study app" }] },
+  openGraph: { title: "Youssef AIT ADDI — Product Design & Development", description: "Thoughtful interfaces, from idea to interaction. Selected work: Kelus, Digi Moqef, and Caffeine.", url: "https://aitaddi.tech", type: "website", images: [{ url: "/projects/kelus-site.jpg", alt: "Kelus study app" }] },
   description:
-    "Portfolio of Youssef Ait Addi, exploring product design and building things end to end. Projects: kelus, Digi Moqef, Caffeine.",
+    "Portfolio of Youssef AIT ADDI, exploring product design and building things end to end. Projects: kelus, Digi Moqef, Caffeine.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

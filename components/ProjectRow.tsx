@@ -1,83 +1,26 @@
+"use client";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import type { Project } from "@/data/projects";
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M5 15 15 5M7 5h8v8" />
-    </svg>
-  );
-}
-
-function GithubIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        stroke="none"
-        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.82c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
-      />
-    </svg>
-  );
-}
-
-export function ProjectRow({ project }: { project: Project }) {
-  const visualHref = project.demoUrl ?? project.repoUrl;
-
-  return (
-    <article className="project" data-reveal>
-      <VisualLink href={visualHref} tone={project.tone}>
-        <Image
-          src={project.image}
-          alt={`Screenshot of the ${project.name} website`}
-          fill
-          unoptimized
-          className="project-shot"
-          sizes="(min-width: 1024px) 50vw, 100vw"
-        />
-        <span className="view-project">
-          {project.demoUrl ? "Live demo" : project.repoLabel} <ArrowIcon />
-        </span>
-      </VisualLink>
-
-      <div className="project-copy">
-        <h2>{project.name}</h2>
-        <p className="summary">{project.summary}</p>
-        {project.repoUrl && (
-          <a
-            className="project-repo-link"
-            href={project.repoUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GithubIcon /> {project.repoLabel}
-          </a>
-        )}
-      </div>
-    </article>
-  );
-}
-
-function VisualLink({
-  href,
-  tone,
-  children,
-}: {
-  href: string | null;
-  tone: string;
-  children: React.ReactNode;
-}) {
-  if (!href) {
-    return <div className={`project-visual ${tone}`}>{children}</div>;
-  }
-  return (
-    <a
-      className={`project-visual ${tone}`}
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-    >
-      {children}
-    </a>
-  );
+export function ProjectRow({ project, index }: { project: Project; index: number }) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const [zoomed, setZoomed] = useState(false);
+  const [failed, setFailed] = useState(false);
+  return <article className={`project ${project.tone}`}>
+    <button className="project-visual" onClick={() => dialog.current?.showModal()} aria-label={`Preview ${project.name}`}>
+      <Image src={project.image} alt={`${project.name} website overview`} fill preload={index === 0} sizes="(max-width: 760px) 100vw, 760px" className="project-shot" onError={() => setFailed(true)} />
+      {failed && <span className="image-fallback">Preview unavailable · Explore the project below</span>}
+      <span className="preview-label">Explore preview <span aria-hidden="true">⤢</span></span>
+    </button>
+    <div className="project-heading"><h3>{project.name}</h3><span>{project.category}</span></div>
+    <p className="summary">{project.summary}</p>
+    <div className="project-actions">{project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Visit website <span aria-hidden="true">↗</span><span className="sr-only"> — {project.name}</span></a>}{project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">View code <span aria-hidden="true">↗</span><span className="sr-only"> — {project.name}</span></a>}</div>
+    <details className="project-details"><summary>Project notes <span aria-hidden="true">+</span></summary><p>{project.detail}</p></details>
+    <dialog ref={dialog} className="preview-dialog" aria-labelledby={`${project.slug}-title`} onClose={() => setZoomed(false)} onClick={e => { if(e.target === e.currentTarget) dialog.current?.close(); }}>
+      <div className="dialog-toolbar"><h2 id={`${project.slug}-title`}>{project.name}<span className="muted"> / Preview</span></h2><div><button onClick={() => setZoomed(!zoomed)} aria-pressed={zoomed}>{zoomed ? "Fit image" : "Zoom in"}</button><button onClick={() => dialog.current?.close()} aria-label="Close preview">Close <span aria-hidden="true">×</span></button></div></div>
+      <div className={`dialog-image ${zoomed ? "zoomed" : ""}`} tabIndex={0} role="region" aria-label={`${project.name} screenshot; scroll to explore`}><Image src={project.image} alt={`${project.name} full website screenshot`} width={1600} height={1100} sizes="95vw" style={{height:"auto"}} /></div>
+      <div className="dialog-footer"><span>Original project screenshot</span>{project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Open live website ↗</a>}</div>
+    </dialog>
+  </article>;
 }

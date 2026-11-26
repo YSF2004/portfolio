@@ -10,7 +10,7 @@ export default function Home() {
     <NavBar />
     <main id="main" className="shell">
       <header className="hero" id="top">
-        <p className="intro-label">Youssef Ait Addi <span>Product design & development</span></p>
+        <p className="intro-label">Youssef AIT ADDI <span>Product design & development</span></p>
         <h1>I design interfaces.<br /><span>Then I build them.</span></h1>
         <p className="intro">From study tools to everyday services, I turn useful ideas into working products for the web.</p>
         <div className="hero-links"><a href="#work">Selected work <ArrowIcon down /></a><a href="mailto:aitaddiyoussef1@gmail.com">Get in touch <ArrowIcon /></a></div>
@@ -25,6 +25,6 @@ export default function Home() {
       </section>
       <section className="contact" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Have something in mind?</h2><p>For opportunities, collaborations, or a simple hello.</p><ContactControls /><div className="social-links"><a href="https://github.com/YSF2004" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a><a href="https://www.linkedin.com/in/youssef-ait-addi-2b794b1a2/" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a></div></section>
     </main>
-    <footer className="shell"><span>Youssef Ait Addi <span className="muted">· Portfolio 2026</span></span><a href="#top">Back to top <ArrowIcon /></a></footer>
+    <footer className="shell"><span>Youssef AIT ADDI <span className="muted">· Portfolio 2026</span></span><a href="#top">Back to top <ArrowIcon /></a></footer>
   </>;
 }

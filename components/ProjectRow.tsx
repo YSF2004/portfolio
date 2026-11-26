@@ -35,14 +35,18 @@ export function ProjectRow({ project, index }: { project: Project; index: number
   return <article className={`project ${project.tone}${featured ? " project-featured" : ""}`} aria-labelledby={`${project.slug}-name`}>
     <div className="project-heading"><h3 id={`${project.slug}-name`}>{project.name}</h3><span className="project-category">{featured && <span className="featured-label">Featured project</span>}{project.category}</span></div>
     <p className="summary">{project.summary}</p>
-    <button className="project-visual" onClick={() => openPreview()} aria-label={`Preview ${project.name}`} aria-haspopup="dialog">
+    {project.demoUrl ? <a className="project-visual" href={project.demoUrl} target="_blank" rel="noreferrer" aria-label={`Visit ${project.name} website (opens in a new tab)`}>
       <Image src={project.image} alt={`${project.name} homepage`} fill preload={featured} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 808px) calc(100vw - 48px), 760px" className="project-shot" onError={() => setFailed(true)} />
-      {failed && <span className="image-fallback">Screenshot unavailable. Use the website link below.</span>}
+      {failed && <span className="image-fallback">Screenshot unavailable. Visit the website.</span>}
+      <span className="preview-label">Visit website <ArrowIcon /></span>
+    </a> : <button className="project-visual" onClick={() => openPreview()} aria-label={`Preview ${project.name}`} aria-haspopup="dialog">
+      <Image src={project.image} alt={`${project.name} homepage`} fill preload={featured} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 808px) calc(100vw - 48px), 760px" className="project-shot" onError={() => setFailed(true)} />
       <span className="preview-label">View screenshot <ExpandIcon /></span>
-    </button>
+    </button>}
     <div className="project-actions">
       {featured && <button className="try-sketch" onClick={() => openPreview("sketch")} aria-haspopup="dialog">Try recall sketch <ArrowIcon /></button>}
       {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Visit website <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
+      <button className="view-screenshot" onClick={() => openPreview()} aria-haspopup="dialog">View screenshot <ExpandIcon /></button>
       {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">View code <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
     </div>
     <details className="project-details"><summary>Behind the project<span className="sr-only"> — {project.name}</span><span className="details-plus" aria-hidden="true">+</span></summary><dl>{project.notes.map(note => <div key={note.label}><dt>{note.label}</dt><dd>{note.text}</dd></div>)}</dl></details>

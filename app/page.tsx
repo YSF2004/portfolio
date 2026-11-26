@@ -21,7 +21,7 @@ export default function Home() {
       </section>
       <section className="about" id="about" aria-labelledby="about-title">
         <h2 id="about-title">A little about me</h2>
-        <div><p>I’m Youssef, a product designer who also builds. I enjoy turning a useful idea into a clear interface, then following it through to a working product.</p><p>My work spans study tools, service booking, and the first websites that got me started. I care about legible typography, accessible interactions, and knowing when to leave something out.</p><ul className="skills" aria-label="Focus areas"><li>Product thinking</li><li>Interface design</li><li>Web development</li></ul></div>
+        <div><p>I’m Youssef, born and raised in Morocco, and a product designer who also builds. I enjoy turning a useful idea into a clear interface, then following it through to a working product.</p><p>My work spans study tools, service booking, and the first websites that got me started. I care about legible typography, accessible interactions, and knowing when to leave something out.</p><ul className="skills" aria-label="Focus areas"><li>Product thinking</li><li>Interface design</li><li>Web development</li></ul></div>
       </section>
       <section className="contact" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Have something in mind?</h2><p>For opportunities, collaborations, or a simple hello.</p><ContactControls /><div className="social-links"><a href="https://github.com/YSF2004" target="_blank" rel="noreferrer">GitHub <ArrowIcon /></a><a href="https://www.linkedin.com/in/youssef-ait-addi-2b794b1a2/" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a></div></section>
     </main>

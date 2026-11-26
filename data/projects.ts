@@ -22,10 +22,10 @@ export const projects: Project[] = [
     notes: [
       { label: "The idea", text: "Make a student’s own notes the starting point for active recall, rather than another document to reread." },
       { label: "The approach", text: "A local-first experience pairs short recall sessions with an adaptive study plan. The interface keeps the current question and next action in focus." },
-      { label: "Explore", text: "Try a small recall interaction sketch here, or open the live product. The source repository is private." },
+      { label: "Explore", text: "Open the live product or inspect the source code." },
     ],
     image: "/projects/kelus-site.jpg", width: 1920, height: 1314,
-    demoUrl: "https://kelus.me", repoUrl: null,
+    demoUrl: "https://kelus.me", repoUrl: "https://github.com/YSF2004/kelus",
   },
   {
     slug: "digi-moqef",

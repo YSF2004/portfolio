@@ -46,7 +46,6 @@ export function ProjectRow({ project, index }: { project: Project; index: number
     <div className="project-actions">
       {featured && <button className="try-sketch" onClick={() => openPreview("sketch")} aria-haspopup="dialog">Try recall sketch <ArrowIcon /></button>}
       {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer">Visit website <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
-      <button className="view-screenshot" onClick={() => openPreview()} aria-haspopup="dialog">View screenshot <ExpandIcon /></button>
       {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer">View code <ArrowIcon /><span className="sr-only"> — {project.name} (opens in a new tab)</span></a>}
     </div>
     <details className="project-details"><summary>Behind the project<span className="sr-only"> — {project.name}</span><span className="details-plus" aria-hidden="true">+</span></summary><dl>{project.notes.map(note => <div key={note.label}><dt>{note.label}</dt><dd>{note.text}</dd></div>)}</dl></details>

@@ -4,53 +4,53 @@ export type Project = {
   tone: "caffeine" | "moqef" | "kelus";
   summary: string;
   category: string;
-  detail: string;
+  notes: { label: string; text: string }[];
   image: string;
+  width: number;
+  height: number;
   demoUrl: string | null;
   repoUrl: string | null;
-  repoLabel: string;
 };
 
-const entries: Project[] = [
+export const projects: Project[] = [
   {
-    category: "Web development · HTML & CSS",
-    detail: "My first HTML and CSS project. A multi-page exploration of a coffee brand, spanning its story, gallery, products and contact page. The cream-and-espresso palette ties the experience together.",
-    slug: "caffeine",
-    name: "Caffeine",
-    tone: "caffeine",
-    summary:
-      "A specialty coffee website, and the beginning of my journey building for the web.",
-    image: "/projects/caffeine-hd.jpg",
-    demoUrl: "https://caffeine-site.vercel.app",
-    repoUrl: "https://github.com/YSF2004/caffeine",
-    repoLabel: "View code",
-  },
-  {
-    category: "Product design · Home services",
-    detail: "A booking concept for plumbing, electrical, AC, painting, handyman and cleaning services. The editorial layout gives each service a clear place and keeps booking within reach.",
-    slug: "digi-moqef",
-    name: "Digi Moqef",
-    tone: "moqef",
-    summary:
-      "An editorial approach to finding and booking everyday home services.",
-    image: "/projects/digimoqef-hero.jpg",
-    demoUrl: "https://digimoqef-site.vercel.app",
-    repoUrl: "https://github.com/youssef-2420/digi2",
-    repoLabel: "View code",
-  },
-  {
-    category: "Product design · Study tools",
-    detail: "A local-first study app built around a student’s own notes. Short recall sessions and an adaptive study plan help turn source material into a repeatable study routine. Source code is private.",
     slug: "kelus",
     name: "Kelus",
     tone: "kelus",
-    summary:
-      "A local-first study app that turns a student's own notes into short recall sessions and an adaptive study plan.",
-    image: "/projects/kelus-site.jpg",
-    demoUrl: "https://kelus.me",
-    repoUrl: null,
-    repoLabel: "Private repo",
+    category: "Study tools",
+    summary: "Turn your own notes into short recall sessions and a study plan that adapts.",
+    notes: [
+      { label: "The idea", text: "Make a student’s own notes the starting point for active recall, rather than another document to reread." },
+      { label: "The approach", text: "A local-first experience pairs short recall sessions with an adaptive study plan. The interface keeps the current question and next action in focus." },
+      { label: "Explore", text: "Try a small recall interaction sketch here, or open the live product. The source repository is private." },
+    ],
+    image: "/projects/kelus-site.jpg", width: 1920, height: 1314,
+    demoUrl: "https://kelus.me", repoUrl: null,
+  },
+  {
+    slug: "digi-moqef",
+    name: "Digi Moqef",
+    tone: "moqef",
+    category: "Home services",
+    summary: "A clear path from finding a home service to making a booking.",
+    notes: [
+      { label: "The idea", text: "Bring plumbing, electrical, AC, painting, handyman, and cleaning services into one booking concept." },
+      { label: "The approach", text: "Bold editorial typography and distinct service categories organize the offer around what someone needs help with. Booking is the main action." },
+    ],
+    image: "/projects/digimoqef-hero.jpg", width: 1920, height: 1307,
+    demoUrl: "https://digimoqef-site.vercel.app", repoUrl: "https://github.com/youssef-2420/digi2",
+  },
+  {
+    slug: "caffeine",
+    name: "Caffeine",
+    tone: "caffeine",
+    category: "HTML & CSS",
+    summary: "A specialty coffee website. My first step from visual ideas to working pages.",
+    notes: [
+      { label: "The starting point", text: "My first HTML and CSS project: a multi-page site covering a coffee brand’s story, gallery, products, and contact details." },
+      { label: "The approach", text: "A cream-and-espresso palette connects the pages. An early exploration of translating a visual identity into layouts, navigation, and reusable styles." },
+    ],
+    image: "/projects/caffeine-hd.jpg", width: 1440, height: 960,
+    demoUrl: "https://caffeine-site.vercel.app", repoUrl: "https://github.com/YSF2004/caffeine",
   },
 ];
-
-export const projects = [entries[2], entries[1], entries[0]];

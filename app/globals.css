@@ -110,3 +110,99 @@ body:has(dialog[open]) { overflow: hidden; }
  html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; }
  .project-visual:hover .project-shot, .hero-links a:hover span { transform: none; }
 }
+
+/* Polish: clearer positioning, a distinct lead project, explicit preview states. */
+:root { --control-hover: oklch(92% .008 80); }
+body { font-size: 16px; }
+.arrow-icon { width: 18px; height: 18px; flex: 0 0 auto; }
+.arrow-down { transform: rotate(135deg); }
+.brand { gap: 7px; letter-spacing: -.075em; }
+.brand-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); align-self: flex-end; margin-bottom: 14px; }
+.nav-links a { display: inline-flex; gap: 5px; align-items: center; }
+.hero { padding: 68px 0 72px; }
+.intro-label { align-items: baseline; flex-wrap: wrap; gap: 4px 14px; }
+.intro-label > span { color: var(--muted); font-size: 13px; font-weight: 400; }
+h1 { margin-top: 24px; letter-spacing: -.04em; font-size: clamp(32px,4.4vw,44px); }
+.intro { max-width: 480px; }
+.hero-links a { gap: 10px; }
+.project { padding-top: 28px; margin-bottom: 44px; }
+.project-heading { margin-top: 0; }
+h3 { font-size: 22px; }
+.project-category { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.project-heading > span { font-size: 13px; }
+.featured-label { color: var(--accent); font-size: 12px; }
+.featured-label::before { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 7px; background: currentColor; vertical-align: middle; }
+.summary { margin-top: 6px; max-width: 570px; }
+.project-visual { margin-top: 20px; aspect-ratio: 1.65; border-radius: 8px; }
+.project-featured .project-visual { aspect-ratio: 1.5; }
+.project-shot { object-fit: contain; }
+.preview-label { font-size: 13px; gap: 12px; }
+.project-actions { align-items: center; flex-wrap: wrap; gap: 4px 24px; margin-top: 12px; font-size: 14px; }
+.project-actions button { border: 0; padding: 0; background: transparent; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; white-space: nowrap; }
+.project-actions .try-sketch { color: var(--accent); }
+.project-actions button:hover { text-decoration: underline; text-underline-offset: 4px; }
+.project-details summary { font-size: 14px; min-height: 52px; }
+.project-details summary:hover { color: var(--ink); }
+.project-details summary .sr-only { font-size: inherit; transform: none; }
+.project-details dl { margin: 0; padding: 8px 0 24px; }
+.project-details dl > div { display: grid; grid-template-columns: 130px minmax(0,1fr); gap: 20px; padding-block: 10px; }
+.project-details dt { font-size: 14px; font-weight: 500; }
+.project-details dd { margin: 0; color: var(--muted); font-size: 15px; }
+.about { padding-top: 12px; }
+.skills { font-size: 13px; }
+.contact h2 { margin-top: 0; font-size: 30px; }
+.email-link { gap: 12px; }
+.contact-controls button { min-width: 136px; }
+.contact-controls button:disabled { opacity: .65; cursor: wait; }
+.social-links a { gap: 6px; }
+footer a { gap: 6px; }
+footer a .arrow-icon { transform: rotate(-45deg); }
+html { scrollbar-gutter: stable; }
+.preview-dialog { max-height: min(90dvh,1000px); }
+.dialog-toolbar { flex: 0 0 auto; padding: 12px 20px; }
+.dialog-toolbar h2 { font-size: 16px; }
+.dialog-toolbar .dialog-close { width: 44px; height: 44px; padding: 0; display: grid; place-items: center; border: 0; background: transparent; border-radius: 6px; }
+.dialog-close:hover { background: var(--surface); }
+.preview-controls { display: flex; flex: 0 0 auto; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; padding: 8px 20px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.preview-modes { display: flex; gap: 4px; }
+.preview-controls button { min-height: 44px; border: 0; border-radius: 5px; padding: 8px 12px; background: transparent; white-space: nowrap; }
+.preview-modes button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; }
+.preview-controls button:hover { background: var(--control-hover); }
+.zoom-control { display: inline-flex; align-items: center; gap: 8px; }
+.preview-type { color: var(--muted); }
+.dialog-image { background: var(--surface); }
+.dialog-image img { display: block; }
+.dialog-footer { flex: 0 0 auto; align-items: center; font-size: 13px; padding-block: 8px; border-top: 1px solid var(--line); }
+.dialog-footer a { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.preview-error { padding: 48px 24px; }
+.sketch-scroll { min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.recall-sketch { padding: 36px; background: var(--surface); }
+.sketch-heading { display: flex; justify-content: space-between; gap: 16px; font-size: 14px; }
+.sketch-counter { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--muted); }
+.sketch-disclaimer { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.recall-card { margin-top: 28px; padding: 32px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; }
+.recall-label { display: block; color: var(--accent); font-size: 13px; margin-bottom: 16px; }
+.recall-card h3 { font-size: clamp(22px,3vw,30px); line-height: 1.35; max-width: 500px; }
+.recall-card p { color: var(--muted); margin-top: 18px; max-width: 60ch; }
+.recall-answer { min-height: 100px; }
+.recall-answer.is-revealed { animation: preview-in 220ms var(--ease-out); }
+.recall-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 28px; }
+.sketch-primary { background: var(--ink); color: var(--paper); border: 0; border-radius: 6px; padding: 10px 16px; min-height: 44px; display: inline-flex; align-items: center; gap: 24px; white-space: nowrap; }
+.sketch-primary:hover { background: var(--accent); }
+.recall-hint { color: var(--muted); font-size: 13px; }
+@media (max-width:600px) {
+ .hero { padding: 44px 0 52px; }
+ .intro-label { flex-direction: column; gap: 2px; }
+ .project-heading { gap: 5px; }
+ .project-category { gap: 10px; }
+ .project-details dl > div { grid-template-columns: minmax(0,1fr); gap: 4px; }
+ .dialog-toolbar { flex-wrap: nowrap; padding: 8px 12px; }
+ .dialog-toolbar h2 { width: auto; }
+ .preview-controls { padding: 8px 12px; }
+ .preview-controls button { padding-inline: 8px; }
+ .dialog-footer { align-items: flex-start; gap: 0; }
+ .recall-sketch { padding: 20px 16px; }
+ .sketch-heading { flex-wrap: wrap; gap: 4px 16px; }
+ .recall-card { padding: 24px 20px; margin-top: 20px; }
+ .recall-answer { min-height: 140px; }
+}

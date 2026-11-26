@@ -17,6 +17,8 @@ Branch: `redesign/interaction-portfolio`.
 - Anchor navigation and back-to-top work.
 - Reduced-motion CSS removes animation, transitions and smooth scrolling. All content is initially visible; no scroll reveal dependency.
 
+The legacy Deno workflow failed because this repository has no Deno test suite. It is replaced in place with Node.js 24, npm ci, ESLint and the production build (including TypeScript).
+
 ## Deployment and limitations
 
 The existing Vercel CLI credential is invalid. No production deployment was performed. Repository-connected preview deployments may run on the branch/PR.

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { title: "Youssef AIT ADDI — Product Design & Development", description: "Thoughtful interfaces, from idea to interaction. Selected work: Kelus, Digi Moqef, and Caffeine.", url: "https://aitaddi.tech", type: "website", images: [{ url: "/projects/kelus-site.jpg", alt: "Kelus study app" }] },
   description:
-    "Portfolio of Youssef AIT ADDI, exploring product design and building things end to end. Projects: kelus, Digi Moqef, Caffeine.",
+    "Portfolio of Youssef AIT ADDI, exploring product design and building things end to end. Projects: Kelus, Digi Moqef, Caffeine.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

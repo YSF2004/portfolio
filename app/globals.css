@@ -125,9 +125,11 @@ h3 { font-size: 22px; }
 .project-details summary:hover { color: var(--ink); }
 .project-details summary .sr-only { font-size: inherit; transform: none; }
 .project-details dl { margin: 0; padding: 8px 0 24px; }
+.project-details[open] dl { animation: project-details-in 280ms var(--ease-out); }
 .project-details dl > div { display: grid; grid-template-columns: 130px minmax(0,1fr); gap: 20px; padding-block: 10px; }
 .project-details dt { font-size: 14px; font-weight: 500; }
 .project-details dd { margin: 0; color: var(--muted); font-size: 15px; }
+@keyframes project-details-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 .about { padding-top: 12px; }
 .skills { font-size: 13px; }
 .contact h2 { margin-top: 0; font-size: 30px; }

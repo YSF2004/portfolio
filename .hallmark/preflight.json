@@ -1,0 +1,10 @@
+{
+  "framework": "Next.js App Router",
+  "fonts": [
+    "Inter",
+    "Roboto Mono"
+  ],
+  "palette": "warm paper and red accent",
+  "motion": "CSS transitions; existing scroll reveals",
+  "decision": "preserve framework, font assets, screenshots and routes; replace visual and interaction layer"
+}

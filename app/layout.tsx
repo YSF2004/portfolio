@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Inter, Roboto_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,6 +14,12 @@ const robotoMono = Roboto_Mono({
   weight: ["400", "500"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://aitaddi.tech"),
   title: "Youssef AIT ADDI — Product Design & Development",
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${robotoMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} ${robotoMono.variable} ${spaceGrotesk.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
